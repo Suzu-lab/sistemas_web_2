@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>PetShop Amigo Fiel - Agendamento</title>
+</head>
+<body>
+      <header class="bg-primary text-white p-4">
+    <div class="container">
+      <h1>PetShop Amigo Fiel</h1>
+      <p class="mb-0">Agende o atendimento do seu pet.</p>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">PetShop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link active" href="agendamento.html">Agendamento</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <h2 class="mb-4">Cadastro do Cliente e do Pet</h2>
+
+    <form id="formAgendamento" class="row g-3">
+      <fieldset class="border p-3 rounded">
+        <legend class="float-none w-auto px-2">Dados do Cliente</legend>
+
+        <div class="col-md-6">
+          <label for="nomeCliente" class="form-label">Nome completo</label>
+          <input type="text" class="form-control" id="nomeCliente" placeholder="Digite seu nome completo" required>
+        </div>
+
+        <div class="col-md-6">
+          <label for="cpf" class="form-label">CPF</label>
+          <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+        </div>
+
+        <div class="col-md-8">
+          <label for="endereco" class="form-label">Endereço</label>
+          <input type="text" class="form-control" id="endereco" placeholder="Rua, número e bairro" required>
+        </div>
+
+        <div class="col-md-4">
+          <label for="telefone" class="form-label">Telefone</label>
+          <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000" required>
+        </div>
+
+        <div class="col-md-6">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label d-block">Sexo</label>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sexo" id="sexoMasc" value="Masculino" required>
+            <label class="form-check-label" for="sexoMasc">Masculino</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sexo" id="sexoFem" value="Feminino">
+            <label class="form-check-label" for="sexoFem">Feminino</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sexo" id="sexoOutro" value="Outro">
+            <label class="form-check-label" for="sexoOutro">Outro</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="border p-3 rounded mt-3">
+        <legend class="float-none w-auto px-2">Dados do Pet</legend>
+
+        <div class="col-md-4">
+          <label for="nomePet" class="form-label">Nome do pet</label>
+          <input type="text" class="form-control" id="nomePet" placeholder="Nome do pet" required>
+        </div>
+
+        <div class="col-md-4">
+          <label for="raca" class="form-label">Raça</label>
+          <input type="text" class="form-control" id="raca" placeholder="Raça do pet" required>
+        </div>
+
+        <div class="col-md-4">
+          <label for="idadePet" class="form-label">Idade</label>
+          <input type="number" class="form-control" id="idadePet" min="0" max="30" placeholder="Idade em anos" required>
+        </div>
+
+        <div class="col-12">
+          <label class="form-label d-block">Porte do pet</label>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="portePequeno">
+            <label class="form-check-label" for="portePequeno">Pequeno</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="porteMedio">
+            <label class="form-check-label" for="porteMedio">Médio</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="porteGrande">
+            <label class="form-check-label" for="porteGrande">Grande</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="border p-3 rounded mt-3">
+        <legend class="float-none w-auto px-2">Agendamento</legend>
+
+        <div class="col-md-6">
+          <label for="servico" class="form-label">Serviço desejado</label>
+          <select class="form-select" id="servico" required>
+            <option value="">Selecione</option>
+            <option value="Banho">Banho</option>
+            <option value="Tosa">Tosa</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label for="metodo" class="form-label">Método de atendimento</label>
+          <select class="form-select" id="metodo" required>
+            <option value="">Selecione</option>
+            <option value="Tele-busca">Tele-busca</option>
+            <option value="Entrega no local">Entrega do pet no local</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label for="dataAgendamento" class="form-label">Data</label>
+          <input type="date" class="form-control" id="dataAgendamento" required>
+        </div>
+
+        <div class="col-md-6">
+          <label for="horaAgendamento" class="form-label">Horário</label>
+          <input type="time" class="form-control" id="horaAgendamento" required>
+        </div>
+
+        <div class="col-12">
+          <label for="observacoes" class="form-label">Observações</label>
+          <textarea class="form-control" id="observacoes" rows="4" placeholder="Informe detalhes importantes sobre o pet ou atendimento"></textarea>
+        </div>
+      </fieldset>
+
+      <div class="col-12 mt-3">
+        <button type="submit" class="btn btn-success">Confirmar agendamento</button>
+        <button type="reset" class="btn btn-secondary">Limpar</button>
+      </div>
+    </form>
+
+    <section id="resultadoAgendamento" class="alert alert-info mt-4 d-none" aria-live="polite"></section>
+  </main>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <hr>
+        <p class="mb-1">Desenvolvido por: Ismael Scalcon</p>
+        <p class="mb-0">Contato: ismael.scalcon@edu.pucrs.br</p>
+        <p>&copy; 2026 Pitchulinha Pet Shop. Todos os direitos reservados.</p>
+    </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</body>
+</html>
