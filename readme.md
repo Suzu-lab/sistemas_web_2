@@ -3,7 +3,7 @@
 Este projeto foi desenvolvido como parte da disciplina **Fundamentos de Sistemas Web**.  
 O objetivo é criar um sistema web simples para apresentação de produtos e serviços de um petshop.
 
-Nesta primeira etapa do projeto, o sistema foi desenvolvido utilizando **HTML puro**, conforme os requisitos da atividade.
+Nesta segunda etapa do projeto, foi incluído CSS e JavaScript, conforme os requisitos da atividade.
 
 # Objetivo do Projeto
 
@@ -14,6 +14,7 @@ A plataforma apresenta:
  - categorias de produtos
  - descrição e valor dos itens
  - serviços disponíveis no petshop
+ - formulário para agendamento dos serviços
 
 # Funcionalidades
 
@@ -47,14 +48,29 @@ Cada serviço contém:
  - valor
 
 Também é apresentada uma opção para serviço de telebusca dos pets para realização dos serviços
+
+### Agendamento
+
+O sistema possui um formulário para agendamento dos serviços do petshop, inclujindo opção de telebusca:
+
+ - **Banho e tosa**
+
 ---
+
 
 # Estrutura do Projeto
 petshop/
+ - agendamento.html
  - index.html
  - servicos.html
+ - css/
+   - bootstrap.min.css
+   - style.css
  - img/
     - imagens
+ - js/
+    - bootstrap.bundle.min.js
+    - javascript.js
  - produtos/
     - produtos_acess.html
     - produtos_higi.html
@@ -63,6 +79,9 @@ petshop/
 ### Páginas do sistema
 
  - **index.html**  
+    Página inicial com apresentação do petshop.
+
+ - **agendamento.html**  
     Página inicial com apresentação do petshop.
 
  - **servicos.html**  
